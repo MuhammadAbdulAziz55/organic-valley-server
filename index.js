@@ -8,6 +8,7 @@ import router from "./routes/products.js";
 import ordersRouter from "./routes/orders.js";
 
 const app = express();
+const port = process.env.PORT || 5000;
 dotenv.config();
 
 const connect = async () => {
@@ -44,6 +45,10 @@ app.use((err, req, res, next) => {
     message: errorMessage,
     stack: errorStatus.stack,
   });
+});
+
+app.get("/", (req, res) => {
+  res.send("Organic-Valley-Server is running");
 });
 
 app.listen(5000, () => {
