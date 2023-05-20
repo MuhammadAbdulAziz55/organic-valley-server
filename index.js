@@ -7,7 +7,7 @@ import router from "./routes/products.js";
 import ordersRouter from "./routes/orders.js";
 
 const app = express();
-const port = process.env.PORT || 5000;
+
 dotenv.config();
 
 const connect = async () => {
