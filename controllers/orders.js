@@ -21,7 +21,7 @@ export const getOrder = async (req, res, next) => {
 };
 export const createOrder = async (req, res, next) => {
   try {
-    const order = await Orders.create(req.body).lean();
+    const order = await Orders.create(req.body);
     res.status(200).json(order);
   } catch (err) {
     next(err);

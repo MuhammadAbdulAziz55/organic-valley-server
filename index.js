@@ -29,9 +29,9 @@ mongoose.connection.on("connect", () => {
 
 // middleware
 app.use(cors());
-
 app.use(express.json());
 
+// Routes
 app.use("/api/products", router);
 app.use("/api/order", ordersRouter);
 
